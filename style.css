@@ -1,0 +1,75 @@
+/* Ги поставувам основните стилови за целата страница */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Креирам мрежа за елементите */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 5px;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+  }
+  
+  /* Основен стил за сите блокови */
+  .box {
+    border: 2px solid black;
+    background-color: white;
+  }
+  
+  /* Различни бои и позиции за блоковите */
+  .box.white.large {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #f8f8f0; /* Светла боја за големиот бел блок */
+  }
+  
+  .box.white.medium {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4; /* Се протега над две редици */
+  }
+  
+  .box.red {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    background-color: #f24c27; /* Црвена боја */
+  }
+  
+  .box.blue {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: #3b88c3; /* Сина боја */
+  }
+  
+  .box.white.small {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  
+  /* Жолтиот блок е поделен на два дела */
+  .box.yellow {
+    display: flex;
+    flex-direction: column; /* Елементите се делат вертикално */
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+  
+  .box.yellow .top-half {
+    flex: 1; /* Го прави горниот дел половина од висината */
+    background-color: #f8f8f0; /* Светла боја за горниот дел */
+    border-bottom: 2px solid black; /* Црна линија помеѓу двата дела */
+  }
+  
+  .box.yellow .bottom-half {
+    flex: 1; /* Долниот дел е исто така половина */
+    background-color: #f9d616; /* Жолта боја за долниот дел */
+  }
+  
